@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <script src="validate.js"></script>
+        <link rel="stylesheet" href="authStyle.css">
+    </head>
+    <body>
+        <wrapper>
+            <div class="registerbox">
+                <form action="" method="post">
+                     <div class="input">
+                        First name
+                        <input type="text" id="fname" required>
+                    </div>
+                    <div class="input">
+                        Last name
+                        <input type="text" id="lname" required>
+                    </div>
+                    <div class="input">
+                        Matric No.
+                        <input type="text" id="matric" required>
+                    </div>
+                    <div class="input">
+                        Email
+                        <input type="text" id="email" required onblur="validateEmail()">
+                        <div class="warnMsg" id="mailMsg">* Please enter a valid email.</div>
+                    </div>
+                    <div class="input">
+                        Password
+                        <input type="password" id="password" required onkeyup="validatePassword()">
+                        <div class="warnMsg" id="pwdlc">* must have lowercase characters</div>                        
+                        <div class="warnMsg" id="pwduc">* must have uppercase characters</div>                        
+                        <div class="warnMsg" id="pwdnum">* must have a number from 0-9</div>                        
+                        <div class="warnMsg" id="pwd8">* must be 8 characters long</div>
+                    </div>
+                    <div class="input">
+                        Confirm Password
+                        <input type="password" id="conpassword" required onblur="passwordConfirmation()">
+                        <h4 class="warnMsg" id="pwdMsg">* Please re-enter your password correctly.</h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="button">
+                            <input type="submit" name="submit" value="Register" onclick="validateRegistry()">
+                        </div>
+                        <div class="link">
+                            <a href="Login.html">Log In</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </wrapper>
+    </body>
+</html>
