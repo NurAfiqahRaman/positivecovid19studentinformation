@@ -1,4 +1,6 @@
-
+body {
+    background-color: beige;
+}
 wrapper {
     height: 600px;
     display: flex;
