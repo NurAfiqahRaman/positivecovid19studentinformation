@@ -1,52 +1,46 @@
 body {
     background-color: beige;
 }
+
 wrapper {
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.loginbox {
+
+.box {
     width: 400px;
     height: fit-content;
     border-radius: 7px;
     padding: 3px;
     margin: 2;
-    background-color: rgba(87, 221, 221, 0.849);
+    background-color: lightgray;
 }
-.registerbox {
-    width: 400px;
-    height: fit-content;
-    border-radius: 7px;
-    padding: 3px;
-    margin: 2;
-    background-color: rgba(87, 221, 221, 0.849);
-}
-.registerbox .input {
-    margin: 3px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 .warnMsg{
     color: red;
     font-size: 15px;
     font-style: italic;
     display: none;
 }
-.input{
-    margin: 3px;
-}
-.input h1{
+
+.input {
+    display: grid;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    font-size: medium;
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.input input{
+
+.input input {
     width: 350px;
     padding: 10px ;
     border: 2px solid black;
     border-radius: 3px;
 }
+
 .bottom {
     margin-top: 5px;
     display:flex;
@@ -54,7 +48,8 @@ wrapper {
     position: relative;
     bottom: 0;
 }
-.button input{
+
+.button input {
     width: 100px;
     height: 50px;
     padding: 10px;
@@ -63,21 +58,24 @@ wrapper {
     bottom: 0;
     left: 0;
     border: 3px solid rgb(9, 97, 97);
-    border-radius: 5px;
+    border-radius: 50px;
     background-color: aqua;
     font-size: 15px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .button input:hover{
     font-weight: bold;
     background-color: rgb(121, 255, 255);
     border-color: rgb(13, 139, 139);
 }
+
 .link {
     position: relative;
     left: 50px;
     top: 20px;
 }
+
 .link a{
     color: black;
     padding: 2px;
