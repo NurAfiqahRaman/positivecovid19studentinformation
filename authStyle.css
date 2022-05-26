@@ -1,5 +1,7 @@
 body {
-    background-color: beige;
+    background-image: url("image/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
 }
 
 wrapper {
