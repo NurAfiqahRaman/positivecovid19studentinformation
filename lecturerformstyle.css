@@ -1,0 +1,52 @@
+.formarea {
+    display: flex;
+    width: 100%;
+}
+.form {
+    margin: 15px;
+    padding: 5px;
+    display: grid;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.formfield{
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.formfield span{
+    margin: 5px;
+}
+.formfield input{
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+.formfield input[type="date"]{
+    width: 20%;
+}
+.formfield textarea{
+    padding: 10px 15px;
+    margin: 10px 5px;
+    width: auto;
+}
+.postbutton input{
+    padding: 10px 5px;
+    margin: 5px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50px;
+    background-color: green;
+    color: white;
+    font-size: medium;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.postbutton input:hover{
+    background-color: darkgreen;
+}

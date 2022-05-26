@@ -65,10 +65,10 @@ function passwordConfirmation(){
     }
 }
 
-function validateRegistry(){
+function validateDataEntry(){
     if (score > 0){
-        window.alert("Invalid registration. Please fill the form properly.");
+        window.alert("Invalid Data Entry. Please fill the form properly.");
     }else{
-        window.alert("Valid registration.");
+        window.alert("Valid Data Entry.");
     }
 }
