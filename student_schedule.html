@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studstyle.css">
+    <title>Student Panel</title>
+
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>PCISS</h1>
+        </div>
+        <ul>
+            <li><img src="image/healthstatus.png" alt="">&nbsp; <span>Health Status</span> </li>
+            <li><img src="image/reading-book (1).png" alt="">&nbsp;<span>Schedule</span> </li>
+            <li><img src="image/letter.png" alt="">&nbsp;<span>Absence Form</span> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="image/search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">Update</a>
+                    <img src="image/notifications.png" alt="">
+                    <div class="img-case">
+                        <img src="image/user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="content-2">
+                <div class="upcoming">
+					
+					<div class="title">
+						<h2>Schedule</h2>
+
+					</div>
+					<div style="text-align: center;">
+						<h2 id="MonthName"></h2>
+						<p id="task"></p></div>
+                    <div class="title">
+
+						<script>
+						const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+						const d = new Date();
+						let name = month[d.getMonth()];
+						document.getElementById("MonthName").innerHTML = name;
+
+						var a = d.getMonth();
+						</script>
+
+						<table bgcolor="lightgrey" align="center" 
+							cellspacing="21" cellpadding="21">
+
+							<thead>
+								<tr>
+									<th><a  href="#" class="btn" onclick="previous(a);"><</a></th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Sun</th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Mon</th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Tue</th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Wed</th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Thu</th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Fri</th>
+									<th style="color: white; background: rgb(168, 173, 201);">
+										Sat</th>
+									<th><a  href="#" class="btn" onclick="next(a);">></a></th>
+
+									<script>
+
+										function next(a){
+											a = a+1;
+											let name = month[a];
+											document.getElementById("MonthName").innerHTML = name;
+											
+										}
+
+										function previous(a){
+											a = a-1;
+											let name = month[a];
+											document.getElementById("MonthName").innerHTML = name;
+											
+										}
+									</script>
+								</tr>
+							</thead>
+				
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>1<a href="#" onclick="show();">*</a></td>
+									<td>2</td>
+
+									<script>
+										function show(){
+											var tasks = "Submit Calculus Chapter 4 question's answers. ";
+											document.getElementById("task").innerHTML = tasks;
+										}
+
+										function show2(){
+											var tasks = "You can submit website design by this date. Get well soon. ";
+											document.getElementById("task").innerHTML = tasks;
+										}
+
+										function show3(){
+											var tasks = "You can submit assignment 2 by this date. Get well soon. ";
+											document.getElementById("task").innerHTML = tasks;
+										}
+									</script>
+								</tr>
+								
+								<tr>
+									<td></td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6<a href="#" onclick="show2();">*</a></td>
+									<td>7</td>
+									<td>8</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>10</td>
+									<td>11</td>
+									<td>12</td>
+									<td>13<a href="#" onclick="show3();">*</a></td>
+									<td>14</td>
+									<td>15</td>
+									<td>16</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>17</td>
+									<td>18</td>
+									<td>19</td>
+									<td>20</td>
+									<td>21</td>
+									<td>22</td>
+									<td>23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>24</td>
+									<td>25</td>
+									<td>26</td>
+									<td>27</td>
+									<td>28</td>
+									<td>29</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>31</td>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+								</tr>
+							</tbody>
+						</table>
+					 </div>
+					</div>
+				</div>
+            <footer>&copy; Copyright 2022, PCISS System</footer> 
+        </div>
+        
+    </div>
+    
+</body>
+</html>
