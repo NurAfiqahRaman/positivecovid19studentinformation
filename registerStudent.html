@@ -23,12 +23,12 @@
                     </div>
                     <div class="input">
                         Email
-                        <input type="text" name="email" required onblur="validateEmail()">
+                        <input type="text" id="email" name="email" required onblur="validateEmail()">
                         <div class="warnMsg" id="mailMsg">* Please enter a valid email.</div>
                     </div>
                     <div class="input">
                         Password
-                        <input type="password" name="password" required onkeyup="validatePassword()">
+                        <input type="password" id="password" name="password" required onkeyup="validatePassword()">
                         <div class="warnMsg" id="pwdlc">* must have lowercase characters</div>                        
                         <div class="warnMsg" id="pwduc">* must have uppercase characters</div>                        
                         <div class="warnMsg" id="pwdnum">* must have a number from 0-9</div>                        
@@ -36,7 +36,7 @@
                     </div>
                     <div class="input">
                         Confirm Password
-                        <input type="password" name="conpassword" required onblur="passwordConfirmation()">
+                        <input type="password" id="conpassword" required onblur="passwordConfirmation()">
                         <h4 class="warnMsg" id="pwdMsg">* Please re-enter your password correctly.</h4>
                     </div>
                     <div class="bottom">
