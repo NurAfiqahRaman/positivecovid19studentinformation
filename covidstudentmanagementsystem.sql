@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: May 21, 2022 at 06:17 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Host: 127.0.0.1
+-- Generation Time: Jun 21, 2022 at 01:33 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -56,8 +56,17 @@ CREATE TABLE `homework` (
 CREATE TABLE `lecturer` (
   `lecturer_id` varchar(50) NOT NULL,
   `lecturer_fname` text NOT NULL,
-  `lecturer_lname` text NOT NULL
+  `lecturer_lname` text NOT NULL,
+  `email` varchar(60) NOT NULL,
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `lecturer`
+--
+
+INSERT INTO `lecturer` (`lecturer_id`, `lecturer_fname`, `lecturer_lname`, `email`, `password`) VALUES
+('43214', 'Jane', 'Doe', 'admin1@mail.com', '1234Abcd');
 
 -- --------------------------------------------------------
 
@@ -94,8 +103,17 @@ CREATE TABLE `section` (
 CREATE TABLE `student` (
   `matric_number` varchar(50) NOT NULL,
   `student_fname` text NOT NULL,
-  `student_lname` text NOT NULL
+  `student_lname` text NOT NULL,
+  `email` varchar(60) NOT NULL,
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`matric_number`, `student_fname`, `student_lname`, `email`, `password`) VALUES
+('12345', 'John', 'Doe', 'user1@mail.com', 'Abcd1234');
 
 -- --------------------------------------------------------
 
