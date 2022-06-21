@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2022 at 01:33 AM
+-- Generation Time: Jun 21, 2022 at 07:36 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -28,10 +28,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `covid_student` (
+  `matric_number` varchar(50) NOT NULL,
   `mysejahtera_id` varchar(250) NOT NULL,
   `covid_start_date` date NOT NULL,
   `covid_last_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `covid_student`
+--
+
+INSERT INTO `covid_student` (`matric_number`, `mysejahtera_id`, `covid_start_date`, `covid_last_date`) VALUES
+('', '1234567890', '2021-08-21', '2021-09-01');
 
 -- --------------------------------------------------------
 
@@ -66,6 +74,7 @@ CREATE TABLE `lecturer` (
 --
 
 INSERT INTO `lecturer` (`lecturer_id`, `lecturer_fname`, `lecturer_lname`, `email`, `password`) VALUES
+('112222', 'John', 'else', 'noahsupitang@gmail.com', 'Noah1234'),
 ('43214', 'Jane', 'Doe', 'admin1@mail.com', '1234Abcd');
 
 -- --------------------------------------------------------
