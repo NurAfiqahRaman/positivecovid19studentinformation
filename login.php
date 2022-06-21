@@ -34,14 +34,16 @@
             <?php
         }
         else {
+            session_start();
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['password'] = $_POST['password'];
             include('lecturer.php');
         }
     } else {
+        session_start();
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['password'] = $_POST['password'];
-        include('student.html');
+        include('student.php');
     }
     $conn->close();
 
