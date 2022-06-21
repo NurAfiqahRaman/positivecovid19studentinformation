@@ -1,3 +1,6 @@
+<?php
+include 'conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +18,9 @@
             <h1>PCISS</h1>
         </div>
         <ul>
-            <li><a href ="studentprofile.html" target="_self" ><img src="image/reading-book (1).png" alt="">&nbsp;<span>Students</span></a> </li>
+            <li><a href ="studentprofile.php" target="_self" ><img src="image/reading-book (1).png" alt="">&nbsp;<span>Students</span></a> </li>
             <li><a href ="studentschedule.html" target="_self" ><img src="image/teacher2.png" alt="">&nbsp;<span>Student Schedule</span></a> </li>
-            <li><a href ="studentassessment.html" target="_self" ><img src="image/school.png" alt="">&nbsp;<span>Assessment</span></a> </li>
+            <li><a href ="studentassessment.php" target="_self" ><img src="image/school.png" alt="">&nbsp;<span>Assessment</span></a> </li>
             <li><a href ="settings.html" target="_self" ><img src="image/settings.png" alt="">&nbsp;<span>Settings</span></a> </li>
         </ul>
     </div>
@@ -42,38 +45,46 @@
                 <div class="staff-details">
                     <div class="title">
                         <h2>Students Information</h2>
-                        <a href="newstudentregistration.html" target="_self" class="btn">Add New Student</a>
+                        
                     </div>
                     <table>
                     <thead>
 			            <tr>
                             <th>Matric Number</th>
-                            <th></th>
-                            <th>Section/Group</th>
+                            
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Enrolled Courses</th>
-                            <th>Covid-19 Status</th>
                             <th>Manage</th>
                             
 			            </tr>
 		            </thead>
                     <tbody>
-                        <td>B031910000</td>
-                        <td></td>
-                        <td>BITS S1G2</td>
-                        <td>Muhammad</td>
-                        <td>Afiq</td>
-                        <td>B031910000@student.utem.edu.my</td>
-                        <td>BITM2113</td>
-                        <td>Positive</td>
-                        <td>
-                            <a class='btn btn-primary btn-sm' href='coviddetails.html' >Covid-19 Details</a>
-                            
-                             
-                        </td>
-                       
+                    <?php
+                        include 'conn.php';
+
+                        $i=1;
+                        $sql = "SELECT * FROM student";
+                        $result=$conn->query($sql);
+                        $result = $conn->query($sql) or die($conn->error);
+                        while($row = $result->fetch_assoc()) 
+                        {
+                            //$staff_id=$row['staff_id'];
+                        ?>
+                            <tr>
+                                
+                                <td><?php echo $row['matric_number'] ?></td>
+                                <td><?php echo $row['student_fname'] ?></td>
+                                <td><?php echo $row['student_lname'] ?></td>
+
+                                <td>
+                                    <a class='btnupdate' href="coviddetails.php?matric_number=<?php echo $row["matric_number"]; ?>" >Details</a>
+                                    
+                                </td>
+                            </tr>
+                        <?php
+                        }
+                    ?>
+                        
                     </tbody>
                     </table>
                 </div>
