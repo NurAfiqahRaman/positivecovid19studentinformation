@@ -1,3 +1,7 @@
+<?php
+include 'conn.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +20,7 @@
         </div>
         <ul>
             
-            <li><a href ="studenthealthstatus.html" target="_self" ><img src="image/healthstatus.png" alt="">&nbsp; <span>Health Status</span></a> </li>
+            <li><a href ="studenthealthstatus.php" target="_self" ><img src="image/healthstatus.png" alt="">&nbsp; <span>Health Status</span></a> </li>
             <li><a href ="studentschedule.html" target="_self" ><img src="image/reading-book (1).png" alt="">&nbsp;<span>Schedule</span></a> </li>
             <li><a href ="studentabsenceform.html" target="_self" ><img src="image/letter.png" alt="">&nbsp;<span>Absence Form</span></a> </li>
         </ul>
@@ -50,15 +54,20 @@
                     <br><br>
                     <h3>Please fill in this form if you are covid-19 patients, have any symptoms or close contact with positive covid-19 patients</h3>
                     
-                    <form id="register" action="healthstudent.php" method="POST" class="input-group">
+                    <form id="register" action="finalstudenthealthstatus.php" method="POST" class="input-group">
                     
                     <div class="input-field"><span class="details">MATRIC NUMBER</span><input type="text" name="matric_number" placeholder="Matric Number" required>
-                    <div class="input-field"><span class="details">MY SEJAHTERA ID </span><input type="text" name="mysejatera_id" placeholder="My Sejatera ID" required>
-                    <div class="input-field"><span class="details">Covid-19 Category Level </span><input type="text" name="mysejatera_id" placeholder="CAT" required>
+                    <div class="input-field"><span class="details">MY SEJAHTERA ID </span><input type="text" name="mysejahtera_id" placeholder="My Sejatera ID" required>
+                   
+                    <div class="input-field"><span class="details">Covid-19 Start Date </span><input type="text" name="cstart_date" placeholder="yy mm dd ex:2022-01-21" required>
+                    <div class="input-field"><span class="details">Covid-19 Last Date </span><input type="text" name="clast_date" placeholder="yy mm dd ex:2022-01-21" required>
                     <br><br><h2><center>Symptoms Details</center></h2><br>
-                    <div class="input-field"><span class="details">Cough </span><input type="text" name="cough_symptoms" placeholder="Yes or No" required>
-                    <div class="input-field"><span class="details">Fever </span><input type="text" name="fever_symptoms" placeholder="Yes or No" required>
-                    <div class="input-field"><span class="details">Other </span><input type="email" name="other_symptoms" placeholder="Other symptoms" >
+                    <div class="input-field"><span class="details">Start Date </span><input type="text" name="sstart_date" placeholder="yy mm dd ex:2022-01-21" required>
+                    <div class="input-field"><span class="details">Last Date </span><input type="text" name="slast_date" placeholder="yy mm dd ex:2022-01-21" required>
+                    <div class="input-field"><span class="details">List Of Symptoms </span><input type="text" name="symptoms_details" placeholder="Symptoms" required>
+                    <div class="input-field"><span class="details">Symptoms Condition </span><input type="text" name="symptoms_condition" placeholder="Normal/Severe" required>
+                    
+                   
                     <br><br><br>
                     
                     
